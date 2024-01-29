@@ -1,0 +1,36 @@
+<nav class="navbar navbar-light bg-info-subtle">
+  <div class="nav-content">
+    <a class="navbar-brand" routerLink="">Shopping</a>
+    <a class="navbar-brand icon" routerLink=""
+      ><img src="../../../assets/logo.png" alt=""
+    /></a>
+
+    <form class="nav-form" ngForm #form="ngForm">
+      <input
+        class="form-control"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        ngModel
+        name="search"
+        #search="ngModel"
+      />
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="searchItems(search.value)"
+      >
+        Search
+      </button>
+      <button
+        mat-flat-button
+        color="accent"
+        [matBadge]="cartItems.length > 0 ? cartItems.length : null"
+        matBadgeColor="warn"
+        routerLink="cart"
+      >
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </form>
+  </div>
+</nav>

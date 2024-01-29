@@ -1,0 +1,51 @@
+.nav-content {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.nav-form {
+  display: grid;
+  grid-template-columns: 70% 20% 10%;
+  column-gap: 10px;
+}
+
+a.navbar-brand.icon {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-content {
+    width: 88vw;
+    box-sizing: border-box;
+    grid-template-columns: 15% 85%;
+    margin-left: 2vw;
+    align-items: center;
+
+    a.navbar-brand {
+      display: none;
+    }
+
+    a.navbar-brand.icon {
+      display: inline;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    button,
+    input {
+      max-height: 45px;
+    }
+  }
+
+  .nav-form {
+    display: grid;
+    grid-template-columns: 60% 25% 15%;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+}

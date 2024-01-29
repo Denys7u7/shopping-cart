@@ -1,0 +1,21 @@
+<div class="container pt-3 content">
+  <div class="container-items">
+    <section class="card-item" *ngFor="let item of items; let i = index">
+      <div>
+        <img [src]="item.image" alt="" />
+      </div>
+      <div>
+        <h1>{{ item.name }}</h1>
+        <h3>{{ item.price | currency }}</h3>
+        <button mat-flat-button color="warn" (click)="removeItem(i)">
+          Remove
+        </button>
+      </div>
+    </section>
+  </div>
+  <section class="calcule" *ngIf="total != 0">
+    <h3>Total</h3>
+    <h1>{{ total | currency }}</h1>
+    <button mat-flat-button color="primary">Complete</button>
+  </section>
+</div>

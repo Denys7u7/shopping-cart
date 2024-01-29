@@ -1,0 +1,7 @@
+<div class="container pt-3">
+  <div class="container-items">
+    <section class="card-item" *ngFor="let item of items$ | async">
+      <app-item [item]="item"></app-item>
+    </section>
+  </div>
+</div>
